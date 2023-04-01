@@ -25,6 +25,27 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+            android:name=".OrderActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".CheckoutActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".EditOrderActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".SplashScreen"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".ViewOrderActivity"
+            android:exported="false">
+        </activity>
+
     </application>
 
 </manifest>

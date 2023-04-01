@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class EditOrderActivity extends AppCompatActivity {
 
-    private com.example.burgersystem.OrderActivity orderActivity;
+    private com.example.burgeronlinesystem.OrderActivity orderActivity;
     private EditText customerNameEditText;
     private EditText itemsOrderedEditText;
     private EditText totalAmountEditText;
@@ -32,12 +32,14 @@ public class EditOrderActivity extends AppCompatActivity {
         totalAmountEditText = findViewById(R.id.total_amount_edittext);
         saveButton = findViewById(R.id.save_btn);
 
-        customerNameEditText.setText(com.example.burgersystem.OrderActivity.Order.getCustomerName());
-        itemsOrderedEditText.setText((CharSequence) com.example.burgersystem.OrderActivity.Order.getItemsOrdered());
-        totalAmountEditText.setText(Double.toString(com.example.burgersystem.OrderActivity.Order.getTotalAmount()));
-        orderStatusEditText.setText(com.example.burgersystem.OrderActivity.Order.getOrderStatus());
+        customerNameEditText.setText(com.example.burgeronlinesystem.OrderActivity.Order.getCustomerName());
+        itemsOrderedEditText.setText((CharSequence) com.example.burgeronlinesystem.OrderActivity.Order.getItemsOrdered());
+        totalAmountEditText.setText(Double.toString(com.example.burgeronlinesystem.OrderActivity.Order.getTotalAmount()));
+        orderStatusEditText.setText(com.example.burgeronlinesystem.OrderActivity.Order.getOrderStatus());
 
         saveButton.setOnClickListener(new View.OnClickListener() {
+            private com.example.burgeronlinesystem.OrderActivity OrderActivity;
+
             @Override
             public void onClick(View v) {
                 String newCustomerName = customerNameEditText.getText().toString();
@@ -45,12 +47,12 @@ public class EditOrderActivity extends AppCompatActivity {
                 Double newTotalAmount = Double.parseDouble(totalAmountEditText.getText().toString());
                 String newOrderStatus = orderStatusEditText.getText().toString();
 
-                com.example.burgersystem.OrderActivity.Order.getCustomerName();
-                com.example.burgersystem.OrderActivity.Order.getItemsOrdered();
-                com.example.burgersystem.OrderActivity.Order.setTotalAmount(newTotalAmount);
-                com.example.burgersystem.OrderActivity.Order.setOrderStatus(newOrderStatus);
+                com.example.burgeronlinesystem.OrderActivity.Order.getCustomerName();
+                com.example.burgeronlinesystem.OrderActivity.Order.getItemsOrdered();
+                com.example.burgeronlinesystem.OrderActivity.Order.setTotalAmount(newTotalAmount);
+                com.example.burgeronlinesystem.OrderActivity.Order.setOrderStatus(newOrderStatus);
 
-        updateOrder(orderActivity);
+        updateOrder(OrderActivity);
 
                 Toast.makeText(EditOrderActivity.this, "Order Updated", Toast.LENGTH_SHORT).show();
 
@@ -59,7 +61,7 @@ public class EditOrderActivity extends AppCompatActivity {
         });
     }
 
-    private void updateOrder(com.example.burgersystem.OrderActivity orderActivity) {
+    private void updateOrder(com.example.burgeronlinesystem.OrderActivity orderActivity) {
     }
 
     public void setTotalAmountEditText(EditText totalAmountEditText) {

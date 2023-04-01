@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         btnOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, com.example.burgersystem.OrderActivity.Order.class);
+                Intent intent = new Intent(MainActivity.this, com.example.burgeronlinesystem.OrderActivity.Order.class);
                 startActivity(intent);
             }
         });

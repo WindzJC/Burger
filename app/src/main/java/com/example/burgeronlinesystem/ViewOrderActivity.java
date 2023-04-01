@@ -15,7 +15,7 @@ public class ViewOrderActivity extends AppCompatActivity {
     private TextView orderDetailsTextView;
     private TextView orderStatusTextView;
     private Button cancelButton;
-    private com.example.burgersystem.OrderActivity currentOrderActivity;
+    private com.example.burgeronlinesystem.OrderActivity currentOrderActivity;
     private EditText newTotalAmount,newItemsOrdered,customerName;
 
     @SuppressLint({"MissingInflatedId", "CutPasteId"})
@@ -30,20 +30,20 @@ public class ViewOrderActivity extends AppCompatActivity {
         orderStatusTextView = findViewById(R.id.order_status_textview);
         cancelButton = findViewById(R.id.cancel_button);
 
-        String orderDetailsText = "Order ID: " + com.example.burgersystem.OrderActivity.Order.getId() + "\n"
-                + "Customer Name: " + com.example.burgersystem.OrderActivity.Order.getCustomerName() + "\n"
-                + "Items Ordered: " + com.example.burgersystem.OrderActivity.Order.getItemsOrdered() + "\n"
-                + "Total Amount: " + com.example.burgersystem.OrderActivity.Order.getTotalAmount() + "\n";
+        String orderDetailsText = "Order ID: " + com.example.burgeronlinesystem.OrderActivity.Order.getId() + "\n"
+                + "Customer Name: " + com.example.burgeronlinesystem.OrderActivity.Order.getCustomerName() + "\n"
+                + "Items Ordered: " + com.example.burgeronlinesystem.OrderActivity.Order.getItemsOrdered() + "\n"
+                + "Total Amount: " + com.example.burgeronlinesystem.OrderActivity.Order.getTotalAmount() + "\n";
 
         orderDetailsTextView.setText(orderDetailsText);
 
-        String orderStatusText = "Order Status: " + com.example.burgersystem.OrderActivity.Order.getOrderStatus();
+        String orderStatusText = "Order Status: " + com.example.burgeronlinesystem.OrderActivity.Order.getOrderStatus();
         orderStatusTextView.setText(orderStatusText);
 
         cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                com.example.burgersystem.OrderActivity.Order.setOrderStatus("Cancelled");
+                com.example.burgeronlinesystem.OrderActivity.Order.setOrderStatus("Cancelled");
 
                 updateOrder(currentOrderActivity);
 
@@ -53,6 +53,6 @@ public class ViewOrderActivity extends AppCompatActivity {
         });
     }
 
-    private void updateOrder(com.example.burgersystem.OrderActivity currentOrderActivity) {
+    private void updateOrder(com.example.burgeronlinesystem.OrderActivity currentOrderActivity) {
     }
 }

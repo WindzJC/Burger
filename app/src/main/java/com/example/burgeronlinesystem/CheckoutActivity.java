@@ -41,7 +41,7 @@ public class CheckoutActivity extends AppCompatActivity {
 
                 Toast.makeText(CheckoutActivity.this, "Thank you for your order! Your " + " payment of $" + totalAmount + " has been received.", Toast.LENGTH_LONG).show();
 
-                Intent intent = new Intent(CheckoutActivity.this, com.example.burgersystem.OrderActivity.class);
+                Intent intent = new Intent(CheckoutActivity.this, com.example.burgeronlinesystem.OrderActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }
