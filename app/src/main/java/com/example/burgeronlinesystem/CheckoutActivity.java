@@ -28,7 +28,7 @@ public class CheckoutActivity extends AppCompatActivity {
         itemsOrdered = getIntent().getStringExtra("itemsOrdered");
         totalAmount = getIntent().getDoubleExtra("totalAmount", 0.0);
 
-        itemsTextView = findViewById(R.id.items_ordered_textview);
+        itemsTextView = findViewById(R.id.items_ordered_edittext);
         totalAmountTextView = findViewById(R.id.total_amount_textview);
         checkoutButton = findViewById(R.id.checkout_button);
 

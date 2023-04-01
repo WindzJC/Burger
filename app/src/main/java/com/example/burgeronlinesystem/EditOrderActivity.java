@@ -18,19 +18,19 @@ public class EditOrderActivity extends AppCompatActivity {
     private EditText orderStatusEditText;
     private Button saveButton;
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint({"SetTextI18n", "MissingInflatedId", "WrongViewCast"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_editorder);
+        setContentView(R.layout.activity_edtorder);
 
         orderActivity = getIntent().getParcelableExtra("order");
 
         customerNameEditText = findViewById(R.id.edit_customer_name);
         itemsOrderedEditText = findViewById(R.id.items_ordered_edittext);
-        orderStatusEditText = findViewById(R.id.order_status_edittext);
+        orderStatusEditText = findViewById(R.id.order_status_textview);
         totalAmountEditText = findViewById(R.id.total_amount_edittext);
-        saveButton = findViewById(R.id.save_button);
+        saveButton = findViewById(R.id.save_btn);
 
         customerNameEditText.setText(com.example.burgersystem.OrderActivity.Order.getCustomerName());
         itemsOrderedEditText.setText((CharSequence) com.example.burgersystem.OrderActivity.Order.getItemsOrdered());

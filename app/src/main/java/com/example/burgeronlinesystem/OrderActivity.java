@@ -1,4 +1,4 @@
-package com.example.burgersystem;
+package com.example.burgeronlinesystem;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;

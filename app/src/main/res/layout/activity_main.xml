@@ -1,40 +1,51 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/idRLContainer"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="16dp">
+    android:layout_height="match_parent"
+    android:background="@color/purple_200"
+    android:orientation="vertical"
+    tools:context=".SplashScreen">
 
     <ImageView
-        android:src="@drawable/burger"
-        android:layout_width="100dp"
-        android:layout_height="100dp"/>
-    <LinearLayout
-        android:layout_width="0dp"
+        android:id="@+id/LinearLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background"
+        android:hapticFeedbackEnabled="false"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints"></ImageView>
+
+    <ListView
+        android:layout_width="410dp"
+        android:layout_height="733dp"
+        app:layout_constraintBottom_toBottomOf="@+id/LinearLayout01"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/order"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:gravity="center_vertical"
-        android:paddingStart="16dp">
-
-        <TextView
-            android:id="@+id/burger_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Burger Name"
-            android:textSize="18sp"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/burger_price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Burger Price"
-            android:textSize="14sp"/>
-
-
-
-    </LinearLayout>
-
-
-
-</LinearLayout>
+        android:text="order"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="250dp"/>
+    <Button
+        android:id="@+id/edtorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="edit order"
+        app:layout_constraintTop_toBottomOf="@id/order"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
