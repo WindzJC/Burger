@@ -7,47 +7,32 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.burgeronlinesystem.R;
-import com.example.burgeronlinesystem.ViewOrderActivity;
-
 public class MainActivity extends AppCompatActivity {
-
-    private Button btnOrder;
-    private Button edtorder;
+    Button Order, Manage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnOrder = findViewById(R.id.order);
-        edtorder = findViewById(R.id.edtorder);
+        Order = (Button) findViewById(R.id.order);
+        Manage = (Button) findViewById(R.id.edtorder);
 
-        btnOrder.setOnClickListener(new View.OnClickListener() {
+        Order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, com.example.burgeronlinesystem.OrderActivity.Order.class);
+                Intent intent = new Intent(MainActivity.this, OrderActivity.class);
                 startActivity(intent);
             }
         });
-        edtorder.setOnClickListener(new View.OnClickListener() {
+        Manage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ViewOrderActivity.class);
+                Intent intent = new Intent(MainActivity.this, ManageOrderActivity.class);
                 startActivity(intent);
             }
         });
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent i = new Intent(MainActivity.this, SplashScreen.class);
-
-                startActivity(i);
-
-                finish();
-            }
-        }, 2000);
 
     }
 }
